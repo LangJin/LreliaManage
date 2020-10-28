@@ -1,5 +1,5 @@
 // eslint-disable-next-line
-import { UserLayout, BasicLayout, BlankLayout,PageView } from '@/layouts'
+import { UserLayout, BasicLayout,PageView } from '@/layouts'
 import { bxAnaalyse } from '@/core/icons'
 
 const RouteView = {
@@ -35,6 +35,12 @@ export const asyncRouterMap = [
             path: 'https://www.baidu.com/',
             name: 'Monitor',
             meta: { title: 'menu.dashboard.monitor', target: '_blank' }
+          },
+          {
+            path: '/dashboard/testwork',
+            name: 'testwork',
+            component: () => import('@/views/dashboard/TestWork'),
+            meta: { title: 'menu.dashboard.testwork', keepAlive: true, permission: [ 'dashboard' ] }
           },
           {
             path: '/dashboard/workplace',
